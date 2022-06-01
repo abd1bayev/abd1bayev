@@ -1,4 +1,4 @@
--👋Hello, I am @ abd1bayev
+-👋Hello, I am @abd1bayev
 
 -🏢Student of the International Astrum IT Academy of Uzbekistan
 
