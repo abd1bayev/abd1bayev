@@ -1,6 +1,8 @@
-![gif](https://user-images.githubusercontent.com/99121169/171357153-12ef2c9f-c254-4bab-a7d2-71e900d295b2.png)
-
-
+👋Hello, I am @ abd1bayev
+🌱 I’m currently learning ...Data Science
+💬 Ask me about ...https://t.me/abd1bayev
+📫 How to reach me: ...jasurabdibayev0@gmail.com
+⚡ Fun fact: ...
 <!--
 **abd1bayev/abd1bayev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
