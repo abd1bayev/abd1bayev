@@ -2,8 +2,8 @@
 
 -🌱 I’m currently learning Data Science
 
-💬 Ask me about https://t.me/abd1bayev
+-💬 Ask me about: https://t.me/abd1bayev
 
-📫 How to reach me:jasurabdibayev0@gmail.com.
+-📫 How to reach me: jasurabdibayev0@gmail.com.
 
-⚡ Fun fact: ...
+-⚡ Fun fact: My field is Data Science. I want to be a great Python programmer
