@@ -2,6 +2,8 @@
 
 <h1 align="center">👋 Hello, I am Jasur Abdibayev</h1>
 
+<h3 align="center">I'm Junior Data Scientist from Uzbekistan!</h3>
+
 -🏢 Student of the International Astrum IT Academy of Uzbekistan
 
 -🌱 I’m currently learning Data Science
