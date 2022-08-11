@@ -1,5 +1,5 @@
-[![image](https://user-images.githubusercontent.com/99121169/184105661-2b737915-7f3c-464a-9d67-b199c91d934c.png)
-](https://gfycat.com/gifs/search/developer)
+[[![image](https://user-images.githubusercontent.com/99121169/184105661-2b737915-7f3c-464a-9d67-b199c91d934c.png)
+](https://gfycat.com/gifs/search/developer)](https://gfycat.com/gifs/search/developer)
 -👋 Hello, I am Jasur Abdibayev
 
 -🏢 Student of the International Astrum IT Academy of Uzbekistan
