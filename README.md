@@ -1,7 +1,6 @@
 ![hiring-manager-quantumhunts](https://user-images.githubusercontent.com/99121169/184106815-d78d7951-f08f-4274-8490-8154c7f85fe9.gif)
 
-
--👋 Hello, I am Jasur Abdibayev
+<h1 align="center">👋 Hello, I am Jasur Abdibayev</h1>
 
 -🏢 Student of the International Astrum IT Academy of Uzbekistan
 
