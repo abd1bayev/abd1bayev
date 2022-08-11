@@ -1,4 +1,6 @@
--👋 Hello, I am @abd1bayev
+![image](https://user-images.githubusercontent.com/99121169/184105661-2b737915-7f3c-464a-9d67-b199c91d934c.png)
+
+-👋 Hello, I am Jasur Abdibayev
 
 -🏢 Student of the International Astrum IT Academy of Uzbekistan
 
@@ -11,4 +13,3 @@
 -📫 How to reach me: jasurabdibayev0@gmail.com.
 
 -⚡ Fun fact: My field is Data Science. I want to be a great Python programmer
-![image](https://user-images.githubusercontent.com/99121169/184105497-669a40d1-7bc8-4156-9601-470da106786b.png)
