@@ -14,7 +14,7 @@
 
 - 📫 How to reach me: jasurabdibayev0@gmail.com.
 
-- ⚡ Fun fact: My field is Data Science. I want to be a great Python programmer
+- ⚡ Fun fact: Data Scientist, Python Django programmer
 
 
 
