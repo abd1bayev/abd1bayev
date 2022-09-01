@@ -14,7 +14,7 @@
 
 - 📫 How to reach me: jasurabdibayev0@gmail.com.
 
-- ⚡ Fun fact: Data Scientist, Python Django programmer
+- ⚡ Fun fact: Data Scientist, Python-Django Beckend Developer
 
 
 
