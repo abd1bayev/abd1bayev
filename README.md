@@ -34,7 +34,7 @@
 <b>My Recent posts on Medium!</b>
 
 
-<a target="_blank" href="https://medium.com/@jasurabdibayev0/my-mobapp-studio-1fe1fa0fb7f6"><img src="blog.png" alt="Recent Article on medium 1"></img></a>
+<a target="_blank" href="https://medium.com/@jasurabdibayev0/my-mobapp-studio-1fe1fa0fb7f6"><img src="assets/blog.png" alt="Recent Article on medium 1"></img></a>
 
 
 <br>
