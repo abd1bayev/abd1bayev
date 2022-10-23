@@ -59,9 +59,3 @@
 
 </p>  
 
-
-<h3 align="left">Statistics:</h3>
-  
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=abd1bayev&show_icons=true&locale=en&layout=compact" alt="abd1bayev" style= /></p>
-
-<p >&nbsp;<img  align="center" src="https://github-readme-stats.vercel.app/api?username=abd1bayev&show_icons=true&locale=en" alt="abd1bayev" /></p>
