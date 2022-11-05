@@ -1,4 +1,4 @@
-### Hi there 👋 I'm Jasur Abdibayev,
+### Hi there 👋 I'm Jasur Abdibayev
 
 - 🏢 Student of the International Astrum IT Academy of Uzbekistan
 
@@ -18,6 +18,7 @@
 - ⚡ Fun fact: Data Scientist, Python-Django Backend Developer
 
 
+<img align="right" alt ="coding" width="400" 
 
 ### My skills include
 
