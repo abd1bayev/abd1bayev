@@ -14,7 +14,7 @@
 - 💬 Ask me about: https://t.me/abd1bayev
 
 
-- 📫 How to reach me: jasurabdibayev0@gmail.com.
+- 📫 How to reach me: [jasurabdibayev](https://abd1bayevj.pythonanywhere.com/)
 
 
 - ⚡ Fun fact: Data Scientist, Python-Django Backend Developer
