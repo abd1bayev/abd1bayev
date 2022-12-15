@@ -13,7 +13,7 @@
 - 🎯 Working with data warehouses, their analysis. Visualization of finished data
 
 
-- 💬 Ask me about:[Telegram](https://t.me/abd1bayev)
+- 💬 Ask me about: [Telegram](https://t.me/abd1bayev)
 
 
 - 📫 How to reach me: [Email](https://abd1bayevj.pythonanywhere.com/)
