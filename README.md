@@ -13,10 +13,10 @@
 - 🎯 Working with data warehouses, their analysis. Visualization of finished data
 
 
-- 💬 Ask me about: https://t.me/abd1bayev
+- 💬 Ask me about:[Telegram](https://t.me/abd1bayev)
 
 
-- 📫 How to reach me: [jasurabdibayev](https://abd1bayevj.pythonanywhere.com/)
+- 📫 How to reach me: [Email](https://abd1bayevj.pythonanywhere.com/)
 
 
 - ⚡ Fun fact: Data Scientist, Python-Django Backend Developer 
