@@ -153,15 +153,13 @@
 <a target="_blank" href="https://www.linkedin.com/in/jasur-abdibayev-a94109241/"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white"></img></a>
 <a target="_blank" href="mailto:jasurabdibayev0@gmail.com"><img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=Gmail&logoColor=white"></img></a>
 <a target="_blank" href="https://medium.com/@jasurabdibayev0"><img src="https://img.shields.io/badge/-Medium-12100E?style=for-the-badge&logo=Medium&logoColor=white"></img></a>
-![Github stats](https://github-readme-stats.vercel.app/api?username=abd1bayev&theme=highcontrast&show_icons=true&count_private=true)
-![Top Languages Card](https://github-readme-stats.vercel.app/api/top-langs/?username=abd1bayev&layout=compact)
-<img style="width: 50%;" align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=abd1bayev" alt="abd1bayev" />
-![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=abd1bayev) 
-
 
 <br>
 
 </p>  
 
+![Github stats](https://github-readme-stats.vercel.app/api?username=abd1bayev&theme=highcontrast&show_icons=true&count_private=true)
+![Top Languages Card](https://github-readme-stats.vercel.app/api/top-langs/?username=abd1bayev&layout=compact)
+<img style="width: 50%;" align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=abd1bayev" alt="abd1bayev" />
 
 
