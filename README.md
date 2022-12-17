@@ -130,7 +130,7 @@
 </table>
 
 
-<b>My Recent posts on Medium!</b>
+<h2>My Recent posts on Medium!</h2>
 
 
 <a target="_blank" href="https://medium.com/@jasurabdibayev0/my-mobapp-studio-1fe1fa0fb7f6"><img src="assets/blog.png" alt="Recent Article on medium 1"></img></a>
