@@ -135,7 +135,7 @@
 
 <a target="_blank" href="https://medium.com/@jasurabdibayev0/my-mobapp-studio-1fe1fa0fb7f6"><img src="assets/blog.png" alt="Recent Article on medium 1"></img></a>
 
-<a target="_blank" https://medium.com/@jasurabdibayev0/my-vivino-project-e405a9833e6d"><img src="assets/blog2.png" alt="Recent Article on medium 2"></img></a>
+<a target="_blank" href="https://medium.com/@jasurabdibayev0/my-vivino-project-e405a9833e6d"><img src="assets/blog2.png" alt="Recent Article on medium 2"></img></a>
 
 <br>
 
