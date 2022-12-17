@@ -4,22 +4,17 @@
 
 
 <div align="left">
-- 🏢 Student of the International Astrum IT Academy of Uzbekistan
-
-
-- 🌱 I’m currently learning Data Science
-
+	
+- 🏢 Campaign: [Uc-coding.uz](https://uc-coding.uz/)
+	
+- ⚡ Fun fact: Data Scientist, Python-Django Backend Developer 	
 
 - 🎯 Working with data warehouses, their analysis. Visualization of finished data
 
-
 - 💬 Ask me about: [Telegram](https://t.me/abd1bayev)
-
 
 - 📫 How to reach me: [Email](https://abd1bayevj.pythonanywhere.com/)
 
-
-- ⚡ Fun fact: Data Scientist, Python-Django Backend Developer 
 
 
 </div>
