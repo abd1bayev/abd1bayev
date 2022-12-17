@@ -154,7 +154,7 @@
 
 </p>  
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=abd1bayev&theme=highcontrast&show_icons=true&count_private=true)<img align="234" src="https://github-readme-streak-stats.herokuapp.com/?user=abd1bayev" alt="abd1bayev" />
+![Github stats](https://github-readme-stats.vercel.app/api?username=abd1bayev&theme=highcontrast&show_icons=true&count_private=true)<img align="100" src="https://github-readme-streak-stats.herokuapp.com/?user=abd1bayev" alt="abd1bayev" />
 <!-- ![Top Languages Card](https://github-readme-stats.vercel.app/api/top-langs/?username=abd1bayev&layout=compact) -->
 
 
