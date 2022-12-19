@@ -13,7 +13,7 @@
 
 - 💬 Ask me about: [Telegram](https://t.me/abd1bayev)
 
-- 📫 How to reach me: [Email](https://abd1bayevj.pythonanywhere.com/)
+- 📫 How to reach me: [Email](https://jasurabdibayev0@gmail.com)
 
 
 
