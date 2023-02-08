@@ -7,7 +7,7 @@
 	
 - 🏢 Campaign: [Uc-coding.uz](https://uc-coding.uz/)
 	
-- ⚡ Fun fact: Data Scientist, Python-Django Backend Developer 	
+- ⚡ Fun fact: Data Engineer, Python-Django Backend Developer 	
 
 - 🎯 Working with data warehouses, their analysis. Visualization of finished data
 
