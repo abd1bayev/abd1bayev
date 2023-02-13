@@ -64,10 +64,6 @@
       <br>Jenkins
     </td>
     <td align="center">
-      <img alt="prometheus" height=64px src="https://cdn.worldvectorlogo.com/logos/prometheus.svg">
-      <br>Prometheus
-    </td>
-    <td align="center">
       <img alt="grafana" height=64px src="https://cdn.worldvectorlogo.com/logos/grafana.svg">
       <br>Grafana
     </td>
