@@ -10,6 +10,8 @@
 - ⚡ Fun fact: Data Engineer, Python-Django Backend Developer 	
 
 - 🎯 Working with data warehouses, their analysis. Visualization of finished data
+	
+- 🔋 My site: [abd1bayev](https://abdibayevj.pythonanywhere.com/)
 
 - 💬 Ask me about: [Telegram](https://t.me/abd1bayev)
 
