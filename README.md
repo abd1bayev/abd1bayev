@@ -73,7 +73,30 @@
     </td>
     
   </tr>
-  
+	<tr>
+	<td align="center">
+	  <img alt="vercel" height=64px src="https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png">
+	  <br>Vercel
+	</td>
+	  <td align="center">
+	    <img alt="mysql" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
+	    <br>MySQL
+	  </td>
+	<td align="center">
+	   <img alt="gunicorn" height=64px src="https://static-00.iconduck.com/assets.00/gunicorn-icon-1024x623-vkw76tay.png">
+          <br>Gunicorn
+	</td>
+
+  <td align="center">
+    <img alt="reactjs" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+    <br>ReactJS
+  </td>
+  <td align="center">
+    <img alt="telegram" height=64px src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg">
+    <br>Telegram Bot
+  </td>
+</tr>
+
 </table>
 
 
