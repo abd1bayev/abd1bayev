@@ -67,13 +67,13 @@
       <img alt="postgresql" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
       <br>PostgreSQL
     </td>
+    
+  </tr>
+	<tr>
     <td align="center">
       <img alt="pycharm" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg">
       <br>PyCharm
     </td>
-    
-  </tr>
-	<tr>
 	<td align="center">
 	  <img alt="vercel" height=64px src="https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png">
 	  <br>Vercel
