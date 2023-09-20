@@ -11,7 +11,7 @@
 
 - 🎯 Working with data warehouses, their analysis. Visualization of finished data
 	
-- 🔋 My site: [abd1bayev](https://abd1bayev.vercel.app/)
+- 🔋 My site: [abd1bayev](https://abd1bayev.up.railway.app/)
 
 - 💬 Ask me about: [Telegram](https://t.me/abd1bayev)
 
