@@ -22,80 +22,53 @@
 </div>
 <h2>My Tech Stack</h2>
 <table>
-  <tr>
-    <td align="center">
-      <img alt="python" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-      <br>Python
-    </td>
-    <td align="center">
-      <img alt="django" height=64px src="https://cdn.worldvectorlogo.com/logos/django.svg">
-      <br>Django
-    </td>
-    <td align="center">
-      <img alt="javascript" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
-      <br>Javascript
-    </td>
-    <td align="center">
-      <img alt="tailwind" height=64px src="https://opencv.org/wp-content/uploads/2021/01/OpenCV-logo.png">
-      <br>OpenCV
-    </td>
-    <td align="center">
-      <img alt="bootstrap" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg">
-      <br>Bootstrap
-    </td>
-    <td align="center">
-      <img alt="docker" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg">
-      <br>Docker
-    </td>
-    <td align="center">
-      <img alt="ubuntu" height=64px src="https://user-images.githubusercontent.com/39632170/109294252-25681c80-7857-11eb-9ec4-4fbdad9fadfc.png">
-      <br>Ubuntu
-    </td>
-    <td align="center">
-      <img alt="nginx" height=64px src="https://cdn.worldvectorlogo.com/logos/nginx-1.svg">
-      <br>Nginx
-    </td>
-    <td align="center">
-      <img alt="aws" height=64px src="https://cdn.worldvectorlogo.com/logos/aws-logo.svg">
-      <br>AWS
-    </td>
-    <td align="center">
-      <img alt="bash" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg">
-      <br>BASH
-    </td>
-    <td align="center">
-      <img alt="postgresql" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
-      <br>PostgreSQL
-    </td>
-    
-  </tr>
-	<tr>
-    <td align="center">
-      <img alt="pycharm" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg">
-      <br>PyCharm
-    </td>
-	<td align="center">
-	  <img alt="vercel" height=64px src="https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png">
-	  <br>Vercel
-	</td>
-	  <td align="center">
-	    <img alt="mysql" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
-	    <br>MySQL
-	  </td>
-	<td align="center">
-	   <img alt="gunicorn" height=64px src="https://static-00.iconduck.com/assets.00/gunicorn-icon-1024x623-vkw76tay.png">
-          <br>Gunicorn
-	</td>
 
-  <td align="center">
-    <img alt="reactjs" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-    <br>ReactJS
-  </td>
-  <td align="center">
-    <img alt="telegram" height=64px src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg">
-    <br>Telegram Bot
-  </td>
-</tr>
+**Back-End**
+
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
+![Django Rest Framework](https://img.shields.io/badge/django%20rest-ff1709?style=for-the-badge&logo=django&logoColor=white)
+![FastAPI](    https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Celery](https://img.shields.io/badge/-Celery-%2300C7B7?style=for-the-badge&&logo=Celery&logoColor=white)
+
+**Databases**
+
+![Postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white)
+
+**Front-End**
+
+![Html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Css](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+**Data Science**
+
+![Numpy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-239120?style=for-the-badge&logo=plotly&logoColor=white)
+![Scikit Learn](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white)
+
+**Tools**
+
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
+![Pycharm](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
+
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/-Git-black?style=for-the-badge&logo=git&logoColor=white)
+![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+**Learning**
+
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![VueJs](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 
 </table>
 
