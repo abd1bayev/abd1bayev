@@ -5,18 +5,15 @@
 
 <div align="left">
 	
-- 🏢 Campaign: [Uc-coding.uz](https://uc-coding.uz/)
-	
-- ⚡ Fun fact: Data Engineer, Python-Django Backend Developer 	
-
-- 🎯 Working with data warehouses, their analysis. Visualization of finished data
-	
-- 🔋 My site: [abd1bayev](https://abd1bayev.up.railway.app/)
-
-- 💬 Ask me about: [Telegram](https://t.me/abd1bayev)
-
-- 📫 How to reach me: [Email](https://jasurabdibayev0@gmail.com)
-
+- 🏢 **Campaigns**:
+  - [Uc-coding.uz](https://uc-coding.uz/)
+  - [Techno-Vision-Group](https://technovision.uz/)
+- ⚡ **Fun Fact**: As a Python-Django Backend Developer, I enjoy building the backbone of web applications!
+- 🎯 **Expertise**: Working with data warehouses, data analysis, visualization of finished data, Backend development with Python-Django
+- 🔋 **My site**: [abd1bayev](https://abd1bayev.uz)
+- 💬 **Ask me about**: [Telegram](https://t.me/abd1bayev)
+- 📫 **How to reach me**: [Email](mailto:jasurabdibayev0@gmail.com)
+- 📱 **Phone**: +998 99 695 35 78, +998 93 695 35 78
 
 
 </div>
