@@ -15,7 +15,8 @@
 - 📫 **How to reach me**: [Email](mailto:jasurabdibayev0@gmail.com)
 - 📱 **Phone**:
   
-  		+998 93 695 35 78 +998 99 695 35 78,
+  		+998 93 695 35 78
+  		+998 99 695 35 78
 
 
 </div>
