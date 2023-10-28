@@ -6,7 +6,6 @@
 <div align="left">
 	
 - 🏢 **Campaigns**:
-  - [Uc-coding.uz](https://uc-coding.uz/)
   - [Techno-Vision-Group](https://technovision.uz/)
 - ⚡ **Fun Fact**: As a Python-Django Backend Developer, I enjoy building the backbone of web applications!
 - 🎯 **Expertise**: Working with data warehouses, data analysis, visualization of finished data, Backend development with Python-Django
