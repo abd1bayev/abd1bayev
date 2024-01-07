@@ -1,6 +1,5 @@
 ### Hi there 👋 I'm Jasur Abdibayev
 
-<img src="https://camo.githubusercontent.com/a8f4872b23bda8f313c956a5ec08633d4f61077e7ed517df780ffd03e6127576/68747470733a2f2f6b6f6d617265762e636f6d2f67687076632f3f757365726e616d653d616264756c6c61616264756b756c6f76266c6162656c3d50726f66696c65253230766965777326636f6c6f723d306537356236267374796c653d666c6174" alt="abd1bayev" data-canonical-src="https://komarev.com/ghpvc/?username=abd1bayev&amp;label=Profile%20views&amp;color=0e75b6&amp;style=flat" style="max-width: 110%;">
 
 
 <div align="left">
