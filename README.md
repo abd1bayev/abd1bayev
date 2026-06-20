@@ -160,7 +160,7 @@
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=abd1bayev&theme=dracula&no-frame=true&no-bg=true&row=1&column=7" width="100%" alt="GitHub trophies"/>
+  <img src="https://github-profile-trophy-tawny.vercel.app/?username=abd1bayev&theme=dracula&no-frame=true&no-bg=true&row=2&column=4&margin-w=15&margin-h=15" width="100%" alt="GitHub trophies"/>
 </div>
 
 ---
@@ -184,7 +184,11 @@
 ## 🐍 Contribution Snake
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/abd1bayev/abd1bayev/output/github-contribution-grid-snake.svg" alt="Contribution snake animation"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg"/>
+    <img src="./assets/github-contribution-grid-snake.svg" alt="Contribution snake animation"/>
+  </picture>
 </div>
 
 ---

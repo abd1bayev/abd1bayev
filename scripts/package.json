@@ -1,0 +1,8 @@
+{
+  "name": "snake-generator",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "generate-snake-animation": "3.5.0"
+  }
+}
