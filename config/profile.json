@@ -2,7 +2,9 @@
   "username": "abd1bayev",
   "name": "Jasur Abdibayev",
   "title": "Software Engineer",
-  "specialization": "Backend · Data · Systems",
+  "headline": "Backend systems · Data engineering · Scalable architecture",
+  "summary": "I build production-grade software — from API design and backend services to data pipelines and analytics platforms. Focused on reliability, maintainability, and systems that scale with the business.",
+  "location": "Uzbekistan",
   "email": "jasurabdibayev0@gmail.com",
   "links": {
     "portfolio": "https://abd1bayev.uz",
@@ -13,39 +15,43 @@
   },
   "company": {
     "name": "Techno Vision Group",
-    "url": "https://technovision.uz/"
+    "url": "https://technovision.uz/",
+    "role": "Software Engineer"
   },
-  "theme": {
-    "primary": "667eea",
-    "secondary": "764ba2",
-    "accent": "f093fb"
-  },
-  "typingLines": [
-    "Software Engineer 🚀",
-    "Building Scalable Products & APIs",
-    "Python · Django · FastAPI",
-    "Data Engineering & Analytics",
-    "Turning Ideas Into Real Software"
-  ],
-  "bios": {
-    "en": {
-      "tagline": "**Software Engineer** crafting reliable, scalable software — from backend systems and APIs to data pipelines and analytics.",
-      "expertise": "Software architecture · Backend systems · Data warehouses · Analytics & visualization",
-      "approach": "Clean code, solid engineering principles, and products that actually solve problems",
-      "funFact": "I love turning complex ideas into elegant, maintainable software"
+  "focusAreas": [
+    {
+      "domain": "Backend Engineering",
+      "description": "RESTful API design, service architecture, authentication, and asynchronous task processing.",
+      "technologies": ["Python", "Django", "FastAPI", "DRF", "Celery"]
     },
-    "uz": {
-      "tagline": "**Dasturiy ta'minot muhandisi (Software Engineer)** — backend tizimlar, API va ma'lumotlar pipeline'laridan tortib tahlil va vizualizatsiyagacha ishonchli dasturiy mahsulotlar yarataman.",
-      "expertise": "Dasturiy arxitektura · Backend tizimlar · Ma'lumotlar omborlari · Tahlil va vizualizatsiya",
-      "approach": "Toza kod, mustahkam muhandislik tamoyillari va haqiqiy muammolarni hal qiladigan mahsulotlar",
-      "funFact": "Murakkab g'oyalarni chiroyli va barqaror dasturiy yechimga aylantirishni yoqtiraman"
+    {
+      "domain": "Data Engineering",
+      "description": "ETL pipelines, data warehousing, analytics workflows, and visualization layers.",
+      "technologies": ["PostgreSQL", "Pandas", "NumPy", "Streamlit", "Plotly"]
     },
-    "ru": {
-      "tagline": "**Инженер программного обеспечения (Software Engineer)**, создающий надёжные и масштабируемые продукты — от backend-систем и API до data pipeline и аналитики.",
-      "expertise": "Архитектура ПО · Backend-системы · Хранилища данных · Аналитика и визуализация",
-      "approach": "Чистый код, инженерные принципы и продукты, которые решают реальные задачи",
-      "funFact": "Люблю превращать сложные идеи в элегантное и поддерживаемое ПО"
+    {
+      "domain": "Infrastructure & Delivery",
+      "description": "Containerized deployments, Linux environments, version control, and CI/CD automation.",
+      "technologies": ["Docker", "Linux", "Git", "Redis", "RabbitMQ"]
     }
+  ],
+  "principles": [
+    "Clarity and maintainability over clever abstractions.",
+    "Systems designed for testability, observability, and long-term change.",
+    "Ship iteratively — solve real problems, measure impact, refine.",
+    "Clean boundaries between domain logic, infrastructure, and presentation."
+  ],
+  "techStack": {
+    "languages": ["Python", "JavaScript", "SQL"],
+    "backend": ["Django", "FastAPI", "Django REST Framework", "Flask", "Celery"],
+    "data": ["PostgreSQL", "Redis", "Pandas", "NumPy", "Scikit-learn", "Jupyter"],
+    "infrastructure": ["Docker", "Linux", "Git", "RabbitMQ"],
+    "frontend": ["React", "Vue", "HTML", "CSS"]
+  },
+  "bios": {
+    "en": "Software engineer focused on backend systems, data pipelines, and scalable product architecture. I work on systems that need to stay reliable under real-world load — from API layers and service design to analytics and data workflows.",
+    "uz": "Backend tizimlar, ma'lumotlar pipeline'lari va masshtablanadigan arxitektura ustida ishlaydigan dasturiy ta'minot muhandisi. API qatlamlari, servis dizayni va tahlil tizimlarini haqiqiy yuk ostida barqaror ishlashi uchun yarataman.",
+    "ru": "Инженер ПО, специализирующийся на backend-системах, data pipeline и масштабируемой архитектуре. Проектирую API, сервисы и аналитические системы, рассчитанные на стабильную работу под реальной нагрузкой."
   },
   "articles": [
     {
@@ -59,8 +65,7 @@
       "url": "https://medium.com/@jasurabdibayev0/my-vivino-project-e405a9833e6d"
     }
   ],
-  "quotes": [
-    "A problem can be solved in 100 different ways — and there's always an easier way.",
-    "You miss 100% of the shots you don't take."
-  ]
+  "theme": {
+    "accent": "667eea"
+  }
 }

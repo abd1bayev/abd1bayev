@@ -6,11 +6,18 @@ export interface ProfileLinks {
   medium: string;
 }
 
-export interface ProfileBio {
-  tagline: string;
-  expertise: string;
-  approach: string;
-  funFact: string;
+export interface FocusArea {
+  domain: string;
+  description: string;
+  technologies: string[];
+}
+
+export interface TechStack {
+  languages: string[];
+  backend: string[];
+  data: string[];
+  infrastructure: string[];
+  frontend: string[];
 }
 
 export interface ProfileArticle {
@@ -23,13 +30,16 @@ export interface ProfileConfig {
   username: string;
   name: string;
   title: string;
-  specialization: string;
+  headline: string;
+  summary: string;
+  location: string;
   email: string;
   links: ProfileLinks;
-  company: { name: string; url: string };
-  theme: { primary: string; secondary: string; accent: string };
-  typingLines: string[];
-  bios: { en: ProfileBio; uz: ProfileBio; ru: ProfileBio };
+  company: { name: string; url: string; role: string };
+  focusAreas: FocusArea[];
+  principles: string[];
+  techStack: TechStack;
+  bios: { en: string; uz: string; ru: string };
   articles: ProfileArticle[];
-  quotes: string[];
+  theme: { accent: string };
 }
