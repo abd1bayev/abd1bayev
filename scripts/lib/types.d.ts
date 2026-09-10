@@ -35,7 +35,9 @@ export interface ProfileConfig {
   headline: string;
   summary: string;
   location: string;
+  timezone: string;
   email: string;
+  status: { current: string; openTo: string[] };
   links: ProfileLinks;
   company: { name: string; url: string; role: string };
   focusAreas: FocusArea[];
@@ -43,4 +45,5 @@ export interface ProfileConfig {
   techStack: TechStack;
   bios: { en: string; uz: string; ru: string };
   articles: ProfileArticle[];
+  theme: { accent: string; bg: string; text: string };
 }

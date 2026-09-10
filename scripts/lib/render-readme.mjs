@@ -22,58 +22,109 @@ function renderStackDict(stack) {
  * @param {ProfileConfig} config
  */
 function renderHero(config) {
-  const { name, title, headline, summary, company, location, links, email, username } = config;
+  const {
+    name,
+    title,
+    headline,
+    summary,
+    company,
+    location,
+    timezone,
+    links,
+    email,
+    username,
+    status,
+    theme,
+  } = config;
+
+  const typingLines = [
+    `${title} · ${headline}`,
+    "Python · Django · FastAPI",
+    "Data Pipelines · PostgreSQL",
+    "Docker · CI/CD · Linux",
+  ]
+    .map(encodeURIComponent)
+    .join(";");
+
+  const openToList = status.openTo.map((item) => `> - ${item}`).join("\n");
 
   return `<div align="center">
 
-<!-- header -->
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0:0d1117,100:161b22&height=120&section=header&text=${encodeURIComponent(name)}&fontSize=42&fontColor=667eea&animation=fadeIn" width="100%" alt="${name}"/>
-
-**${title}** · ${headline}
-
-${summary}
-
-\`${company.role}\` @ [**${company.name}**](${company.url}) · \`${location}\`
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=800&color=${theme.accent.toUpperCase()}&center=true&vCenter=true&width=700&lines=${typingLines}" alt="${title}"/>
 
 <br />
 
-[![GitHub](https://img.shields.io/badge/GitHub-abd1bayev-0d1117?style=for-the-badge&logo=github&logoColor=white)](${links.github})
-[![Portfolio](https://img.shields.io/badge/Portfolio-abd1bayev.uz-667eea?style=for-the-badge&logo=google-chrome&logoColor=white)](${links.portfolio})
+### ${name}
+
+\`${company.role}\` @ [**${company.name}**](${company.url}) · \`${location}\` · \`${timezone}\`
+
+${summary}
+
+<br />
+
+[![GitHub](https://img.shields.io/badge/GitHub-abd1bayev-${theme.bg}?style=for-the-badge&logo=github&logoColor=${theme.accent})](${links.github})
+[![Portfolio](https://img.shields.io/badge/Portfolio-abd1bayev.uz-${theme.accent}?style=for-the-badge&logo=googlechrome&logoColor=white)](${links.portfolio})
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](${links.linkedin})
 [![Telegram](https://img.shields.io/badge/Telegram-@abd1bayev-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](${links.telegram})
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:${email})
 
 <br /><br />
 
-<img src="https://komarev.com/ghpvc/?username=${username}&label=views&color=667eea&style=flat-square" alt="Profile views"/>
+<img src="https://komarev.com/ghpvc/?username=${username}&label=profile%20views&color=${theme.accent}&style=flat-square" alt="Profile views"/>
 
-</div>`;
+</div>
+
+> [!IMPORTANT]
+> ${status.current}
+
+> [!TIP]
+> Open to collaboration:
+> ${openToList}`;
 }
 
 /**
  * @param {ProfileConfig} config
  */
-function renderProfileClass(config) {
-  const { name, title, company, location, focusAreas } = config;
-  const focus = quoteList(focusAreas.map((a) => a.domain));
+function renderBentoGrid(config) {
+  const { username, theme, focusAreas } = config;
+  const { name, title, company, location } = config;
 
-  return `## \`profile.py\`
+  return `## Overview
+
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
+
+**\`profile.py\`**
 
 \`\`\`python
+from dataclasses import dataclass
+from typing import Self
+
+@dataclass(frozen=True, slots=True)
 class Engineer:
     name: str = "${name}"
     role: str = "${title}"
     company: str = "${company.name}"
     location: str = "${location}"
-    focus: list[str] = [${focus}]
+    focus: tuple[str, ...] = (${focusAreas.map((a) => `"${a.domain}"`).join(", ")})
 
-    def build(self) -> "ProductionSoftware":
-        return (
-            self.design_apis()
-            >> self.orchestrate_data()
-            >> self.ship_reliably()
-        )
-\`\`\``;
+    def pipeline(self) -> Self:
+        return self.design_apis().orchestrate_data().ship()
+\`\`\`
+
+</td>
+<td width="50%" valign="top">
+
+**\`stats.json\`**
+
+<img src="https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=${theme.accent}&icon_color=${theme.accent}&text_color=${theme.text}&rank_icon=percentile" width="100%" alt="GitHub stats"/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=transparent&hide_border=true&bg_color=00000000&title_color=${theme.accent}&text_color=${theme.text}&langs_count=6&hide=html,css,markdown" width="100%" alt="Top languages"/>
+
+</td>
+</tr>
+</table>`;
 }
 
 /**
@@ -83,74 +134,96 @@ function renderArchitecture() {
   return `## \`architecture.mermaid\`
 
 \`\`\`mermaid
-flowchart LR
-    subgraph Client
-        WEB[Web / Mobile]
-        API_C[API Clients]
+---
+config:
+  theme: dark
+  look: neo
+---
+flowchart TB
+    subgraph Clients["🌐 Clients"]
+        WEB[Web Apps]
+        API_C[API Consumers]
     end
 
-    subgraph Backend
+    subgraph Platform["⚙️ Platform Layer"]
         GW[API Gateway]
-        AUTH[Auth Layer]
-        SVC[Service Layer]
+        AUTH[Auth / JWT]
+        SVC[Services]
         Q[Task Queue]
     end
 
-    subgraph Data
+    subgraph Storage["🗄️ Data Layer"]
         DB[(PostgreSQL)]
         CACHE[(Redis)]
-        DWH[(Data Warehouse)]
+        DWH[(Analytics)]
     end
 
     WEB --> GW
     API_C --> GW
     GW --> AUTH --> SVC
-    SVC --> DB
-    SVC --> CACHE
+    SVC --> DB & CACHE
     SVC --> Q --> SVC
     DB --> DWH
+
+    classDef client fill:#161b22,stroke:#667eea,color:#c9d1d9
+    classDef platform fill:#0d1117,stroke:#764ba2,color:#c9d1d9
+    classDef storage fill:#161b22,stroke:#f093fb,color:#c9d1d9
+    class WEB,API_C client
+    class GW,AUTH,SVC,Q platform
+    class DB,CACHE,DWH storage
 \`\`\``;
 }
 
 /**
  * @param {ProfileConfig} config
  */
-function renderModules(config) {
-  const imports = config.focusAreas.map((a) => `from ${a.module} import ${a.domain.replace(/\s+/g, "")}`).join("\n");
-  const modules = config.focusAreas
+function renderModulesBento(config) {
+  const cards = config.focusAreas
     .map(
-      (a) =>
-        `# ${a.module}.py — ${a.domain}\n` +
-        `# ${a.description}\n` +
-        `STACK = [${quoteList(a.technologies)}]`,
+      (a) => `<td width="33%" valign="top">
+
+**\`${a.module}/\`**
+
+\`\`\`python
+# ${a.domain}
+# ${a.description}
+TECH = [${quoteList(a.technologies)}]
+\`\`\`
+
+</td>`,
     )
-    .join("\n\n");
+    .join("\n");
 
   return `## \`modules/\`
 
-\`\`\`python
-${imports}
-\`\`\`
-
-\`\`\`python
-${modules}
-\`\`\``;
+<table width="100%">
+<tr>
+${cards}
+</tr>
+</table>`;
 }
 
 /**
  * @param {ProfileConfig} config
  */
 function renderStack(config) {
-  return `## \`stack.config.py\`
+  const { theme } = config;
 
-\`\`\`python
-STACK: dict[str, list[str]] = {
-${renderStackDict(config.techStack)}
-}
+  return `## \`stack.config.toml\`
+
+\`\`\`toml
+[stack]
+languages = [${quoteList(config.techStack.languages)}]
+backend   = [${quoteList(config.techStack.backend)}]
+data      = [${quoteList(config.techStack.data)}]
+infra     = [${quoteList(config.techStack.infrastructure)}]
+frontend  = [${quoteList(config.techStack.frontend)}]
 \`\`\`
 
 <div align="center">
-<img src="https://skillicons.dev/icons?i=python,django,fastapi,postgres,redis,rabbitmq,docker,git,linux,react,vue&perline=11" alt="Technologies" />
+
+<img src="https://skillicons.dev/icons?i=python,django,fastapi,flask,postgres,redis,rabbitmq,docker,git,linux,react,vue,postman&perline=13&theme=dark" alt="Tech stack" />
+
 </div>`;
 }
 
@@ -164,12 +237,15 @@ function renderManifest(config) {
 
   return `## \`engineering.manifest.ts\`
 
+> [!NOTE]
+> Engineering principles that guide every system I build.
+
 \`\`\`typescript
 export const PRINCIPLES = {
 ${entries}
-} as const;
+} as const satisfies Record<string, string>;
 
-type Principle = typeof PRINCIPLES[keyof typeof PRINCIPLES];
+export type Principle = (typeof PRINCIPLES)[keyof typeof PRINCIPLES];
 \`\`\``;
 }
 
@@ -181,25 +257,27 @@ function renderAbout(config) {
 
   return `## \`about/\`
 
-\`\`\`bash
-$ cat about.en.md
-${bios.en}
+<details open>
+<summary><b>🇬🇧 English</b></summary>
+<br />
 
-$ cat about.uz.md
-${bios.uz}
+> ${bios.en}
 
-$ cat about.ru.md
-${bios.ru}
-\`\`\`
+</details>
 
 <details>
-<summary><b>Multilingual bios</b></summary>
+<summary><b>🇺🇿 O'zbek</b></summary>
+<br />
 
-**EN** — ${bios.en}
+> ${bios.uz}
 
-**UZ** — ${bios.uz}
+</details>
 
-**RU** — ${bios.ru}
+<details>
+<summary><b>🇷🇺 Русский</b></summary>
+<br />
+
+> ${bios.ru}
 
 </details>`;
 }
@@ -208,10 +286,6 @@ ${bios.ru}
  * @param {ProfileConfig} config
  */
 function renderPublications(config) {
-  const rows = config.articles
-    .map((a) => `| \`${a.title.replace(/\s+/g, "_").toLowerCase()}\` | ${a.topic} | [read →](${a.url}) |`)
-    .join("\n");
-
   return `## \`publications.json\`
 
 \`\`\`json
@@ -225,9 +299,20 @@ ${config.articles
 ]
 \`\`\`
 
-| id | topic | link |
-|:---|:------|:-----|
-${rows}`;
+| Article | Topic | Link |
+|:--------|:------|:-----|
+${config.articles.map((a) => `| **${a.title}** | ${a.topic} | [Read →](${a.url}) |`).join("\n")}`;
+}
+
+/**
+ * @param {ProfileConfig} config
+ */
+function renderActivity(config) {
+  const { username, theme } = config;
+
+  return `## \`activity.graph\`
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=react-dark&hide_border=true&bg_color=${theme.bg}&color=${theme.accent}&line=${theme.accent}&point=${theme.accent}&area=true&custom_title=Contribution%20Activity" width="100%" alt="Activity graph" />`;
 }
 
 /**
@@ -236,42 +321,42 @@ ${rows}`;
 function renderContactApi(config) {
   const { links, email, name } = config;
 
-  return `## \`GET /contact\`
+  return `## \`GET /api/v1/contact\`
 
-\`\`\`bash
-$ curl -s https://abd1bayev.uz/api/contact | jq
-\`\`\`
-
-\`\`\`json
-{
-  "name": "${name}",
-  "portfolio": "${links.portfolio}",
-  "website": "${links.website}",
-  "github": "${links.github}",
-  "linkedin": "${links.linkedin}",
-  "medium": "${links.medium}",
-  "telegram": "${links.telegram}",
-  "email": "${email}"
-}
+\`\`\`yaml
+openapi: 3.1.0
+info:
+  title: Contact API
+  version: 1.0.0
+paths:
+  /contact:
+    get:
+      summary: Reach ${name}
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                properties:
+                  portfolio: { type: string, example: "${links.portfolio}" }
+                  github:    { type: string, example: "${links.github}" }
+                  linkedin:  { type: string, example: "${links.linkedin}" }
+                  telegram:  { type: string, example: "${links.telegram}" }
+                  email:     { type: string, example: "${email}" }
 \`\`\`
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/→_Portfolio-667eea?style=flat-square&logo=google-chrome&logoColor=white)](${links.portfolio})
-[![Website](https://img.shields.io/badge/→_Website-000000?style=flat-square&logo=vercel&logoColor=white)](${links.website})
-[![LinkedIn](https://img.shields.io/badge/→_LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](${links.linkedin})
-[![Medium](https://img.shields.io/badge/→_Medium-12100E?style=flat-square&logo=medium&logoColor=white)](${links.medium})
-[![Telegram](https://img.shields.io/badge/→_Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)](${links.telegram})
-[![Email](https://img.shields.io/badge/→_Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:${email})
+[![Portfolio](https://img.shields.io/badge/Portfolio-667eea?style=flat-square&logo=googlechrome&logoColor=white)](${links.portfolio})
+[![Website](https://img.shields.io/badge/Website-000000?style=flat-square&logo=vercel&logoColor=white)](${links.website})
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](${links.linkedin})
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=flat-square&logo=medium&logoColor=white)](${links.medium})
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)](${links.telegram})
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:${email})
 
 <br /><br />
 
-\`\`\`
-────────────────────────────────────────────
-  Built with clean code · Maintained via CI
-  Source: config/profile.json
-────────────────────────────────────────────
-\`\`\`
+<sub>config-driven · CI validated · <code>npm run generate</code></sub>
 
 </div>`;
 }
@@ -287,7 +372,7 @@ export function renderReadme(config) {
     "",
     "---",
     "",
-    renderProfileClass(config),
+    renderBentoGrid(config),
     "",
     "---",
     "",
@@ -295,7 +380,7 @@ export function renderReadme(config) {
     "",
     "---",
     "",
-    renderModules(config),
+    renderModulesBento(config),
     "",
     "---",
     "",
@@ -312,6 +397,10 @@ export function renderReadme(config) {
     "---",
     "",
     renderPublications(config),
+    "",
+    "---",
+    "",
+    renderActivity(config),
     "",
     "---",
     "",

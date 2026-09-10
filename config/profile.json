@@ -2,10 +2,15 @@
   "username": "abd1bayev",
   "name": "Jasur Abdibayev",
   "title": "Software Engineer",
-  "headline": "Backend systems · Data engineering · Scalable architecture",
-  "summary": "Production-grade APIs, data pipelines, and backend systems built for reliability under real-world load.",
+  "headline": "Backend · Data · Systems",
+  "summary": "Production-grade APIs, data pipelines, and backend systems — engineered for reliability under real-world load.",
   "location": "Uzbekistan",
+  "timezone": "UTC+5",
   "email": "jasurabdibayev0@gmail.com",
+  "status": {
+    "current": "Building backend & data systems at Techno Vision Group",
+    "openTo": ["Backend engineering", "Data pipelines", "System architecture"]
+  },
   "links": {
     "portfolio": "https://abd1bayev.uz",
     "website": "https://abd1bayev.vercel.app",
@@ -68,5 +73,10 @@
       "topic": "Project Case Study",
       "url": "https://medium.com/@jasurabdibayev0/my-vivino-project-e405a9833e6d"
     }
-  ]
+  ],
+  "theme": {
+    "accent": "667eea",
+    "bg": "0d1117",
+    "text": "c9d1d9"
+  }
 }
