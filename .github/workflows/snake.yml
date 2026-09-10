@@ -7,15 +7,21 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
-      - "assets/github-contribution-grid-snake*.svg"
+      - main
+    paths:
+      - "scripts/**"
+      - "config/**"
       - "README.md"
+      - ".github/workflows/snake.yml"
 
 permissions:
   contents: write
 
+env:
+  GITHUB_USERNAME: abd1bayev
+
 jobs:
-  generate:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,16 +32,39 @@ jobs:
           cache: npm
           cache-dependency-path: scripts/package-lock.json
 
-      - name: Install generator
+      - name: Validate scripts
+        working-directory: scripts
+        run: |
+          npm ci
+          npm run validate
+          npm run generate:readme
+
+      - name: Check README is up to date
+        run: git diff --exit-code README.md
+
+  generate:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Install dependencies
         working-directory: scripts
         run: npm ci
 
       - name: Generate snake SVGs
-        run: node scripts/generate-snake.mjs abd1bayev
+        run: node scripts/generate-snake.mjs
+        env:
+          GITHUB_USERNAME: ${{ env.GITHUB_USERNAME }}
 
       - name: Commit updated snake assets
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update contribution snake animation"
           file_pattern: assets/github-contribution-grid-snake*.svg
-          skip_dirty_check: true

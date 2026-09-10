@@ -1,7 +1,16 @@
 {
-  "name": "snake-generator",
+  "name": "abd1bayev-profile",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "generate:readme": "node generate-readme.mjs",
+    "generate:snake": "node generate-snake.mjs",
+    "generate": "npm run generate:readme && npm run generate:snake",
+    "validate": "node --check generate-readme.mjs && node --check generate-snake.mjs"
+  },
   "dependencies": {
     "generate-snake-animation": "3.5.0"
   }

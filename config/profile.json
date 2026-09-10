@@ -1,0 +1,66 @@
+{
+  "username": "abd1bayev",
+  "name": "Jasur Abdibayev",
+  "title": "Software Engineer",
+  "specialization": "Backend · Data · Systems",
+  "email": "jasurabdibayev0@gmail.com",
+  "links": {
+    "portfolio": "https://abd1bayev.uz",
+    "website": "https://abd1bayev.vercel.app",
+    "telegram": "https://t.me/abd1bayev",
+    "linkedin": "https://www.linkedin.com/in/jasur-abdibayev-a94109241/",
+    "medium": "https://medium.com/@jasurabdibayev0"
+  },
+  "company": {
+    "name": "Techno Vision Group",
+    "url": "https://technovision.uz/"
+  },
+  "theme": {
+    "primary": "667eea",
+    "secondary": "764ba2",
+    "accent": "f093fb"
+  },
+  "typingLines": [
+    "Software Engineer 🚀",
+    "Building Scalable Products & APIs",
+    "Python · Django · FastAPI",
+    "Data Engineering & Analytics",
+    "Turning Ideas Into Real Software"
+  ],
+  "bios": {
+    "en": {
+      "tagline": "**Software Engineer** crafting reliable, scalable software — from backend systems and APIs to data pipelines and analytics.",
+      "expertise": "Software architecture · Backend systems · Data warehouses · Analytics & visualization",
+      "approach": "Clean code, solid engineering principles, and products that actually solve problems",
+      "funFact": "I love turning complex ideas into elegant, maintainable software"
+    },
+    "uz": {
+      "tagline": "**Dasturiy ta'minot muhandisi (Software Engineer)** — backend tizimlar, API va ma'lumotlar pipeline'laridan tortib tahlil va vizualizatsiyagacha ishonchli dasturiy mahsulotlar yarataman.",
+      "expertise": "Dasturiy arxitektura · Backend tizimlar · Ma'lumotlar omborlari · Tahlil va vizualizatsiya",
+      "approach": "Toza kod, mustahkam muhandislik tamoyillari va haqiqiy muammolarni hal qiladigan mahsulotlar",
+      "funFact": "Murakkab g'oyalarni chiroyli va barqaror dasturiy yechimga aylantirishni yoqtiraman"
+    },
+    "ru": {
+      "tagline": "**Инженер программного обеспечения (Software Engineer)**, создающий надёжные и масштабируемые продукты — от backend-систем и API до data pipeline и аналитики.",
+      "expertise": "Архитектура ПО · Backend-системы · Хранилища данных · Аналитика и визуализация",
+      "approach": "Чистый код, инженерные принципы и продукты, которые решают реальные задачи",
+      "funFact": "Люблю превращать сложные идеи в элегантное и поддерживаемое ПО"
+    }
+  },
+  "articles": [
+    {
+      "title": "My MobApp Studio",
+      "topic": "Mobile Development",
+      "url": "https://medium.com/@jasurabdibayev0/my-mobapp-studio-1fe1fa0fb7f6"
+    },
+    {
+      "title": "My Vivino Project",
+      "topic": "Project Case Study",
+      "url": "https://medium.com/@jasurabdibayev0/my-vivino-project-e405a9833e6d"
+    }
+  ],
+  "quotes": [
+    "A problem can be solved in 100 different ways — and there's always an easier way.",
+    "You miss 100% of the shots you don't take."
+  ]
+}
