@@ -1,0 +1,40 @@
+name: Profile README
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - "README.md"
+      - ".github/workflows/profile.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci
+
+      - name: Validate scripts
+        working-directory: scripts
+        run: npm run validate
+
+      - name: Generate README
+        working-directory: scripts
+        run: npm run generate:readme
+
+      - name: Verify README is in sync
+        run: git diff --exit-code README.md

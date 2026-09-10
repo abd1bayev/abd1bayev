@@ -3,7 +3,7 @@
   "name": "Jasur Abdibayev",
   "title": "Software Engineer",
   "headline": "Backend systems · Data engineering · Scalable architecture",
-  "summary": "I build production-grade software — from API design and backend services to data pipelines and analytics platforms. Focused on reliability, maintainability, and systems that scale with the business.",
+  "summary": "Production-grade APIs, data pipelines, and backend systems built for reliability under real-world load.",
   "location": "Uzbekistan",
   "email": "jasurabdibayev0@gmail.com",
   "links": {
@@ -11,7 +11,8 @@
     "website": "https://abd1bayev.vercel.app",
     "telegram": "https://t.me/abd1bayev",
     "linkedin": "https://www.linkedin.com/in/jasur-abdibayev-a94109241/",
-    "medium": "https://medium.com/@jasurabdibayev0"
+    "medium": "https://medium.com/@jasurabdibayev0",
+    "github": "https://github.com/abd1bayev"
   },
   "company": {
     "name": "Techno Vision Group",
@@ -20,27 +21,30 @@
   },
   "focusAreas": [
     {
+      "module": "backend",
       "domain": "Backend Engineering",
-      "description": "RESTful API design, service architecture, authentication, and asynchronous task processing.",
+      "description": "RESTful APIs, service layers, auth, async task orchestration",
       "technologies": ["Python", "Django", "FastAPI", "DRF", "Celery"]
     },
     {
+      "module": "data",
       "domain": "Data Engineering",
-      "description": "ETL pipelines, data warehousing, analytics workflows, and visualization layers.",
+      "description": "ETL pipelines, warehousing, analytics, visualization",
       "technologies": ["PostgreSQL", "Pandas", "NumPy", "Streamlit", "Plotly"]
     },
     {
-      "domain": "Infrastructure & Delivery",
-      "description": "Containerized deployments, Linux environments, version control, and CI/CD automation.",
+      "module": "infra",
+      "domain": "Infrastructure",
+      "description": "Containers, Linux, CI/CD, message queues, caching",
       "technologies": ["Docker", "Linux", "Git", "Redis", "RabbitMQ"]
     }
   ],
-  "principles": [
-    "Clarity and maintainability over clever abstractions.",
-    "Systems designed for testability, observability, and long-term change.",
-    "Ship iteratively — solve real problems, measure impact, refine.",
-    "Clean boundaries between domain logic, infrastructure, and presentation."
-  ],
+  "principles": {
+    "clarity": "maintainability over clever abstractions",
+    "design": "testable, observable, evolvable systems",
+    "delivery": "iterate → measure → refine",
+    "boundaries": "strict separation of domain, infra, and presentation"
+  },
   "techStack": {
     "languages": ["Python", "JavaScript", "SQL"],
     "backend": ["Django", "FastAPI", "Django REST Framework", "Flask", "Celery"],
@@ -49,9 +53,9 @@
     "frontend": ["React", "Vue", "HTML", "CSS"]
   },
   "bios": {
-    "en": "Software engineer focused on backend systems, data pipelines, and scalable product architecture. I work on systems that need to stay reliable under real-world load — from API layers and service design to analytics and data workflows.",
-    "uz": "Backend tizimlar, ma'lumotlar pipeline'lari va masshtablanadigan arxitektura ustida ishlaydigan dasturiy ta'minot muhandisi. API qatlamlari, servis dizayni va tahlil tizimlarini haqiqiy yuk ostida barqaror ishlashi uchun yarataman.",
-    "ru": "Инженер ПО, специализирующийся на backend-системах, data pipeline и масштабируемой архитектуре. Проектирую API, сервисы и аналитические системы, рассчитанные на стабильную работу под реальной нагрузкой."
+    "en": "Software engineer focused on backend systems, data pipelines, and scalable architecture. I design services that remain stable under production load.",
+    "uz": "Backend tizimlar, ma'lumotlar pipeline'lari va masshtablanadigan arxitektura ustida ishlaydigan muhandis. Production yuk ostida barqaror servislar yarataman.",
+    "ru": "Инженер ПО: backend-системы, data pipeline, масштабируемая архитектура. Проектирую сервисы, стабильные под production-нагрузкой."
   },
   "articles": [
     {
@@ -64,8 +68,5 @@
       "topic": "Project Case Study",
       "url": "https://medium.com/@jasurabdibayev0/my-vivino-project-e405a9833e6d"
     }
-  ],
-  "theme": {
-    "accent": "667eea"
-  }
+  ]
 }

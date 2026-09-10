@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "generate:readme": "npm run generate:readme --prefix scripts",
-    "generate:snake": "npm run generate:snake --prefix scripts",
     "generate": "npm run generate --prefix scripts",
     "validate": "npm run validate --prefix scripts",
     "postinstall": "npm ci --prefix scripts"

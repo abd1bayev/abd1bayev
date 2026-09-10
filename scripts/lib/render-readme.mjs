@@ -3,28 +3,174 @@
 /**
  * @param {string[]} items
  */
-function formatInlineList(items) {
-  return items.join(" · ");
+function quoteList(items) {
+  return items.map((item) => `"${item}"`).join(", ");
+}
+
+/**
+ * @param {Record<string, string[]>} stack
+ */
+function renderStackDict(stack) {
+  const lines = Object.entries(stack).map(
+    ([key, values]) => `    "${key}": [${quoteList(values)}],`,
+  );
+  lines[lines.length - 1] = lines[lines.length - 1].replace(/,$/, "");
+  return lines.join("\n");
 }
 
 /**
  * @param {ProfileConfig} config
  */
-function renderHeader(config) {
-  const { name, title, headline, summary, company, location, links, email } = config;
+function renderHero(config) {
+  const { name, title, headline, summary, company, location, links, email, username } = config;
 
-  return `# ${name}
+  return `<div align="center">
 
-**${title}** — ${headline}
+<!-- header -->
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:0d1117,100:161b22&height=120&section=header&text=${encodeURIComponent(name)}&fontSize=42&fontColor=667eea&animation=fadeIn" width="100%" alt="${name}"/>
+
+**${title}** · ${headline}
 
 ${summary}
 
-Currently at **[${company.name}](${company.url})** · ${location}
+\`${company.role}\` @ [**${company.name}**](${company.url}) · \`${location}\`
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-abd1bayev.uz-667eea?style=flat-square&logo=google-chrome&logoColor=white)](${links.portfolio})
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](${links.linkedin})
-[![Telegram](https://img.shields.io/badge/Telegram-@abd1bayev-26A5E4?style=flat-square&logo=telegram&logoColor=white)](${links.telegram})
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:${email})`;
+<br />
+
+[![GitHub](https://img.shields.io/badge/GitHub-abd1bayev-0d1117?style=for-the-badge&logo=github&logoColor=white)](${links.github})
+[![Portfolio](https://img.shields.io/badge/Portfolio-abd1bayev.uz-667eea?style=for-the-badge&logo=google-chrome&logoColor=white)](${links.portfolio})
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](${links.linkedin})
+[![Telegram](https://img.shields.io/badge/Telegram-@abd1bayev-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](${links.telegram})
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:${email})
+
+<br /><br />
+
+<img src="https://komarev.com/ghpvc/?username=${username}&label=views&color=667eea&style=flat-square" alt="Profile views"/>
+
+</div>`;
+}
+
+/**
+ * @param {ProfileConfig} config
+ */
+function renderProfileClass(config) {
+  const { name, title, company, location, focusAreas } = config;
+  const focus = quoteList(focusAreas.map((a) => a.domain));
+
+  return `## \`profile.py\`
+
+\`\`\`python
+class Engineer:
+    name: str = "${name}"
+    role: str = "${title}"
+    company: str = "${company.name}"
+    location: str = "${location}"
+    focus: list[str] = [${focus}]
+
+    def build(self) -> "ProductionSoftware":
+        return (
+            self.design_apis()
+            >> self.orchestrate_data()
+            >> self.ship_reliably()
+        )
+\`\`\``;
+}
+
+/**
+ * @param {ProfileConfig} config
+ */
+function renderArchitecture() {
+  return `## \`architecture.mermaid\`
+
+\`\`\`mermaid
+flowchart LR
+    subgraph Client
+        WEB[Web / Mobile]
+        API_C[API Clients]
+    end
+
+    subgraph Backend
+        GW[API Gateway]
+        AUTH[Auth Layer]
+        SVC[Service Layer]
+        Q[Task Queue]
+    end
+
+    subgraph Data
+        DB[(PostgreSQL)]
+        CACHE[(Redis)]
+        DWH[(Data Warehouse)]
+    end
+
+    WEB --> GW
+    API_C --> GW
+    GW --> AUTH --> SVC
+    SVC --> DB
+    SVC --> CACHE
+    SVC --> Q --> SVC
+    DB --> DWH
+\`\`\``;
+}
+
+/**
+ * @param {ProfileConfig} config
+ */
+function renderModules(config) {
+  const imports = config.focusAreas.map((a) => `from ${a.module} import ${a.domain.replace(/\s+/g, "")}`).join("\n");
+  const modules = config.focusAreas
+    .map(
+      (a) =>
+        `# ${a.module}.py — ${a.domain}\n` +
+        `# ${a.description}\n` +
+        `STACK = [${quoteList(a.technologies)}]`,
+    )
+    .join("\n\n");
+
+  return `## \`modules/\`
+
+\`\`\`python
+${imports}
+\`\`\`
+
+\`\`\`python
+${modules}
+\`\`\``;
+}
+
+/**
+ * @param {ProfileConfig} config
+ */
+function renderStack(config) {
+  return `## \`stack.config.py\`
+
+\`\`\`python
+STACK: dict[str, list[str]] = {
+${renderStackDict(config.techStack)}
+}
+\`\`\`
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i=python,django,fastapi,postgres,redis,rabbitmq,docker,git,linux,react,vue&perline=11" alt="Technologies" />
+</div>`;
+}
+
+/**
+ * @param {ProfileConfig} config
+ */
+function renderManifest(config) {
+  const entries = Object.entries(config.principles)
+    .map(([key, value]) => `  ${key}: "${value}",`)
+    .join("\n");
+
+  return `## \`engineering.manifest.ts\`
+
+\`\`\`typescript
+export const PRINCIPLES = {
+${entries}
+} as const;
+
+type Principle = typeof PRINCIPLES[keyof typeof PRINCIPLES];
+\`\`\``;
 }
 
 /**
@@ -33,29 +179,27 @@ Currently at **[${company.name}](${company.url})** · ${location}
 function renderAbout(config) {
   const { bios } = config;
 
-  return `## About
+  return `## \`about/\`
 
-<details open>
-<summary><b>English</b></summary>
-<br/>
-
+\`\`\`bash
+$ cat about.en.md
 ${bios.en}
 
-</details>
-
-<details>
-<summary><b>O'zbek</b></summary>
-<br/>
-
+$ cat about.uz.md
 ${bios.uz}
 
-</details>
+$ cat about.ru.md
+${bios.ru}
+\`\`\`
 
 <details>
-<summary><b>Русский</b></summary>
-<br/>
+<summary><b>Multilingual bios</b></summary>
 
-${bios.ru}
+**EN** — ${bios.en}
+
+**UZ** — ${bios.uz}
+
+**RU** — ${bios.ru}
 
 </details>`;
 }
@@ -63,106 +207,73 @@ ${bios.ru}
 /**
  * @param {ProfileConfig} config
  */
-function renderFocusAreas(config) {
-  const rows = config.focusAreas
-    .map(
-      (area) =>
-        `| **${area.domain}** | ${area.description} | ${formatInlineList(area.technologies)} |`,
-    )
-    .join("\n");
-
-  return `## Focus Areas
-
-| Domain | Scope | Stack |
-|:-------|:------|:------|
-${rows}`;
-}
-
-/**
- * @param {ProfileConfig} config
- */
-function renderPrinciples(config) {
-  const items = config.principles.map((p) => `- ${p}`).join("\n");
-  return `## Engineering Principles
-
-${items}`;
-}
-
-/**
- * @param {ProfileConfig} config
- */
-function renderTechStack(config) {
-  const { techStack } = config;
-
-  return `## Tech Stack
-
-| Layer | Technologies |
-|:------|:-------------|
-| **Languages** | ${formatInlineList(techStack.languages)} |
-| **Backend** | ${formatInlineList(techStack.backend)} |
-| **Data** | ${formatInlineList(techStack.data)} |
-| **Infrastructure** | ${formatInlineList(techStack.infrastructure)} |
-| **Frontend** | ${formatInlineList(techStack.frontend)} |
-
-<img src="https://skillicons.dev/icons?i=python,django,fastapi,postgres,redis,docker,git,linux&perline=8" alt="Core technologies" />`;
-}
-
-/**
- * @param {ProfileConfig} config
- */
-function renderWriting(config) {
+function renderPublications(config) {
   const rows = config.articles
-    .map((a) => `| [${a.title}](${a.url}) | ${a.topic} |`)
+    .map((a) => `| \`${a.title.replace(/\s+/g, "_").toLowerCase()}\` | ${a.topic} | [read →](${a.url}) |`)
     .join("\n");
 
-  return `## Writing
+  return `## \`publications.json\`
 
-| Article | Topic |
-|:--------|:------|
+\`\`\`json
+[
+${config.articles
+  .map(
+    (a) =>
+      `  { "title": "${a.title}", "topic": "${a.topic}", "url": "${a.url}" }`,
+  )
+  .join(",\n")}
+]
+\`\`\`
+
+| id | topic | link |
+|:---|:------|:-----|
 ${rows}`;
 }
 
 /**
  * @param {ProfileConfig} config
  */
-function renderActivity(config) {
-  const { username, theme } = config;
+function renderContactApi(config) {
+  const { links, email, name } = config;
 
-  return `## GitHub Activity
+  return `## \`GET /contact\`
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=react-dark&hide_border=true&bg_color=0d1117&color=${theme.accent}&line=${theme.accent}&point=${theme.accent}&area=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity" />
+\`\`\`bash
+$ curl -s https://abd1bayev.uz/api/contact | jq
+\`\`\`
 
-<br />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg"/>
-  <img src="./assets/github-contribution-grid-snake.svg" alt="Contribution snake" width="100%"/>
-</picture>`;
+\`\`\`json
+{
+  "name": "${name}",
+  "portfolio": "${links.portfolio}",
+  "website": "${links.website}",
+  "github": "${links.github}",
+  "linkedin": "${links.linkedin}",
+  "medium": "${links.medium}",
+  "telegram": "${links.telegram}",
+  "email": "${email}"
 }
+\`\`\`
 
-/**
- * @param {ProfileConfig} config
- */
-function renderContact(config) {
-  const { name, links, email } = config;
+<div align="center">
 
-  return `## Contact
+[![Portfolio](https://img.shields.io/badge/→_Portfolio-667eea?style=flat-square&logo=google-chrome&logoColor=white)](${links.portfolio})
+[![Website](https://img.shields.io/badge/→_Website-000000?style=flat-square&logo=vercel&logoColor=white)](${links.website})
+[![LinkedIn](https://img.shields.io/badge/→_LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](${links.linkedin})
+[![Medium](https://img.shields.io/badge/→_Medium-12100E?style=flat-square&logo=medium&logoColor=white)](${links.medium})
+[![Telegram](https://img.shields.io/badge/→_Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)](${links.telegram})
+[![Email](https://img.shields.io/badge/→_Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:${email})
 
-Open to technical discussions, collaboration, and backend/data engineering opportunities.
+<br /><br />
 
-| | |
-|:--|:--|
-| **Portfolio** | [abd1bayev.uz](${links.portfolio}) |
-| **Website** | [abd1bayev.vercel.app](${links.website}) |
-| **LinkedIn** | [linkedin.com/in/jasur-abdibayev](${links.linkedin}) |
-| **Medium** | [medium.com/@jasurabdibayev0](${links.medium}) |
-| **Telegram** | [@abd1bayev](${links.telegram}) |
-| **Email** | [${email}](mailto:${email}) |
+\`\`\`
+────────────────────────────────────────────
+  Built with clean code · Maintained via CI
+  Source: config/profile.json
+────────────────────────────────────────────
+\`\`\`
 
----
-
-<sub>Profile README generated from <code>config/profile.json</code> · ${name}</sub>`;
+</div>`;
 }
 
 /**
@@ -172,7 +283,27 @@ Open to technical discussions, collaboration, and backend/data engineering oppor
 export function renderReadme(config) {
   return [
     "<!-- Generated by scripts/generate-readme.mjs — edit config/profile.json -->",
-    renderHeader(config),
+    renderHero(config),
+    "",
+    "---",
+    "",
+    renderProfileClass(config),
+    "",
+    "---",
+    "",
+    renderArchitecture(),
+    "",
+    "---",
+    "",
+    renderModules(config),
+    "",
+    "---",
+    "",
+    renderStack(config),
+    "",
+    "---",
+    "",
+    renderManifest(config),
     "",
     "---",
     "",
@@ -180,27 +311,11 @@ export function renderReadme(config) {
     "",
     "---",
     "",
-    renderFocusAreas(config),
+    renderPublications(config),
     "",
     "---",
     "",
-    renderPrinciples(config),
-    "",
-    "---",
-    "",
-    renderTechStack(config),
-    "",
-    "---",
-    "",
-    renderWriting(config),
-    "",
-    "---",
-    "",
-    renderActivity(config),
-    "",
-    "---",
-    "",
-    renderContact(config),
+    renderContactApi(config),
     "",
   ].join("\n");
 }

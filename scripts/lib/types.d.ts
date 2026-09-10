@@ -4,9 +4,11 @@ export interface ProfileLinks {
   telegram: string;
   linkedin: string;
   medium: string;
+  github: string;
 }
 
 export interface FocusArea {
+  module: string;
   domain: string;
   description: string;
   technologies: string[];
@@ -37,9 +39,8 @@ export interface ProfileConfig {
   links: ProfileLinks;
   company: { name: string; url: string; role: string };
   focusAreas: FocusArea[];
-  principles: string[];
+  principles: Record<string, string>;
   techStack: TechStack;
   bios: { en: string; uz: string; ru: string };
   articles: ProfileArticle[];
-  theme: { accent: string };
 }
